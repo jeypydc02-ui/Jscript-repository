@@ -1,102 +1,95 @@
-//Conditional Statement
-let x =10;
+// Logical Operators
 
-console.log(x =="10");
-console.log(x==="10");
-console.log(x===parseInt("10"));
-console.log("");
-console.log(x !="10");
-console.log(x !=="10");
-console.log(x !== parseInt("10"));
+//AND OPERATORS
+let age =18; experience =3; 
+language = ["JavaScript", "Java", "C#", "Python"];
 
-let a = "Hello World";
-let b = "hello world";
-console.log(a == b);
+console.log(age >=18 && experience >2);
+console.log(age >=18 && experience >3);
 
 
- //age conditional statement
-
-let age = -19;           
-let ageCategory = [
- "Senior Citizen", //0, 60+
- "Adult",          //1, 40-59
- "Young Adult",    //2, 20-39
- "Teenager",       //3, 13-19
- "Kid",            //4, 4-12
- "Toddler",        //5, 2-3
- "Baby"];          //6, 0-1
-
-
-if(age >=60) {
-    console.log(`"You are ${ageCategory[0]}."`);
-
-}else if(age >=40) {
-    console.log(`You are ${ageCategory[1]}.`);
-
-}else if(age >=20) {
-    console.log(`You are ${ageCategory[2]}.`);
-
-}else if(age >=13) {
-    console.log(`You are ${ageCategory[3]}.`);
-
-}else if (age >= 4) {
-    console.log(`You are ${ageCategory[4]}.`);
-
-}else if (age >= 2) {
-    console.log(`You are ${ageCategory[5]}.`);
-
-}else if (age>=0) {
-    console.log(`You are ${ageCategory[6]}.`);
-
-}else if (age < 0) {
-    console.log(`Age doesn't exist`);
+if (age >= 18 && experience >2 && language === "JavaScript", "Java", "C#", "Python") {
+    alert("You are Qualified for the Job");
+    console.log("You are Qualified for the Job");
 }else {
-     console.log(`Age doesn't exist`);
+    alert("You are NOT Qualified for the Job");
+    console.log("You are NOT Qualified for the Job");
 }
 
 
 
-let mathGrade = 96;
-let scienceGrade = 93;
-let englishGrade = 90;
-let filipinoGrade =87;
-let computerGrade = 99;
+//OR OPERATOS
 
-let gradeCategory = ["With Highest Honor", "With High Honor", "With Honor", "Passed", "Failed"];
+let hasJob = true;
+let jobExperience = 1;
 
-let gwa = mathGrade + scienceGrade + englishGrade + filipinoGrade + computerGrade;
-gwa /= 5;
+console.log(`OR OPERATORS`);
+console.log(hasJob || jobExperience >3 );
+console.log(hasJob || jobExperience >=1 );
 
-let fgwa = parseFloat(gwa.toFixed(2));
-
-console.log("GRADES:")
-console.log(`Math                         : ${mathGrade}`);
-console.log(`Science                      : ${scienceGrade}`);
-console.log(`English                      : ${englishGrade}`);
-console.log(`Filipino                     : ${filipinoGrade}`);
-console.log(`Computer                     : ${computerGrade}`);
-console.log(`General Weight Average       : ${fgwa.toFixed(2)}`);
-
-if (fgwa > 100) {
-    console.log(`Invalid Grade`);
-
-}else if (fgwa >=98) {
-    console.log(`You are ${gradeCategory[0]}.`);
-
-}else if (fgwa >= 95) {
-    console.log(`You are ${gradeCategory[1]}.`);
-
-}else if (fgwa >= 90) {
-    console.log(`You are ${gradeCategory[2]}.`);
-
-}else if (fgwa >= 75) {
-    console.log(`You are ${gradeCategory[3]}.`);
-
-}else if (fgwa < 75) {
-    console.log(`You are ${gradeCategory[4]}.`);
-
-}else if (fgwa < 0) {
-    console.log(`Invalid Grade`);
-} else {
-     console.log(`Invalid Grade`);
+if(hasJob || jobExperience >4) {
+    console.log(`You are QUALIFIED for the Job even you have ${jobExperience} year experience only.`);
+    alert(`You are QUALIFIED for the Job even you have ${jobExperience} year experience only.`);
+}else {
+    console.log(`You do NOT QUALIFIED for this Job`);
 }
+
+
+//NOT Operators
+console.log("NOT OPERATORS:");
+let hasDegree = true;
+let experienceJob = 2;
+
+console.log(hasDegree);
+console.log(!hasDegree);
+
+console.log(experienceJob);
+console.log(!experienceJob);
+
+if(!hasDegree) {
+    console.log(`Wow, yabang!`);
+}else {
+    console.log(`Batugan ka kasi`);
+}
+
+
+//NESTED CONDITIONAL STATEMENT
+console.log(`NESTED CONDITIONAL STATEMENT:`);
+let ages =18;
+let experience2 = 1;
+
+
+if(ages >=18){
+
+    if(experience2 >=2) {
+        console.log(`Congratulations!, You're Hired for the Job, Junior Full Stack Software Developer.`);
+    }else {
+        console.log(`I'm Sorry, I can't hire you because you don't have enough experience even you are in Legal age.`);
+    }
+}
+
+
+//Tutorial Challenge
+
+let agee =19; agee2 = 17; isRegistered = true;
+let votes = ["Valid Voter", "Register Frist", "Invalid Voter", "Non Voter"];
+    if(isRegistered && agee >= 18) {
+        console.log(`You are a ${votes[0]}.`);
+
+        if(!isRegistered && agee>= 18) {
+            console.log(`You are a ${votes[0]}.`);
+        }else {
+            console.log(`${votes[1]}!`);
+        }
+    
+    }
+
+    if(isRegistered &&  agee2 < 18) {
+        console.log(`You are a ${votes[2]}.`);
+
+        if(!isRegistered && agee2 < 18) {
+            console.log(`You are a ${votes[2]}.`);
+        }else {
+            console.log(`You are a ${votes[3]}.`);
+        }
+    }

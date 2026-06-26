@@ -1,101 +1,110 @@
-//WHILE LOOP
-
-let i =10;
-let a = 3;
-
-while(i >= 5) {
-    console.log(i);
-    i--;
+//FOR-LOOP
+for (let a = 0; a <= 10;a++){
+   
+    if (a > 7) break;
+ console.log(a);
 }
 
-while(a >=1) {
-    console.log(a);
-    a--;
+console.log("");
+
+
+
+//FOR-LOOP ITERRATING ARRAYS
+
+let people = ["Aljean", "Charles", "Gwyneth", "Jean", "Jenny", "John Paul", "Micaella", "Prince", "Zere May"];
+
+console.log(people[people.length-2]);
+console.log(people[7]);
+
+for(let b = 0; b <people.length;b++){
+
+    if(b > people.length-2) break;
+    console.log(people[b]);
+    
+
+}
+console.log("");
+
+for( let c = people.length-1; c >=0;c--) {
+    console.log(people[c]);
 }
 
-let people = ["Jepy", "Lebron", "Lewis", "Faker", "Karltzy", "Manny Pacquiao", "John Cena"];
-let peeps = 2;
+console.log("");
+//FOR/IN LOOP
+console.log("FOR/IN LOOP");
 
-while(people[peeps]) {
-    console.log(people[peeps]);
-    peeps--;
+for( let d in people) {
+    console.log(d);
+    console.log(people[d])
     
 }
+
 console.log("");
 
-let peoples = ["TLPH", "ONIC", "OMG", "RORA", "FLCN", "TWIS", "APBR", "TNC"];
-
-let p = peoples.length-3;
-
-while(peoples[p]) {
-    console.log(peoples[p]);
-    p++;
+for(let e in people) {
+    console.log(`${parseInt(e)+1}. ${people[e]}`);
 }
 console.log("");
 
-let peopless = ["TLPH", "ONIC", "OMG", "RORA", "FLCN", "TWIS", "APBR", "TNC"];
+//FOR/OF LOOP
+console.log("FOR/OF LOOP");
 
-let pp = peopless.length-3;
-
-while(peopless[pp]) {
-    console.log(peopless[pp]);
-    pp--;
+for(let person of people) {
+    console.log(person);
 }
-
 console.log("");
-let cof = ["Aljean", "Charles", "Gwynenth", "Jean", "John Paul", "Micaella", "Prince", "Zere May" ];
-
-let cofs = 3;
-let search = 5;
-console.log(cof[0]);
-console.log(cof[1]);
-console.log(cof[2]);
-console.log(cof[3]);
-console.log(cof[4]);
-console.log(cof[5]);
-console.log(cof[6]);
-console.log(cof[7]);
-
-console.log(cof[cofs]);
-
-console.log("");
-while (cof[cofs]) {
-   
-
-    if(cofs ===search) {
-        break;
-    }
-    console.log(cof[cofs]);
-    cofs++;
+let f =1;
+for (let personn of people) {
+    console.log(`${f}. ${personn}`);
+    f++;
 }
-
-
-//do-while loop
-
-let num = 9;
-
-do{
-    console.log("hello");
-    num++
-}while(num > 20);
 
 
 
 //Tutorial Challenge
 
-let oneToTwenty = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-let sum = 0;
-let arr = 0;
+let names = ["Aljean", "Charles", "Gwyneth", "Jean", "Jenny", "John Paul", "Micaella", "Prince", "Zere May"];
+console.log("");
+console.log("Tutorial Challenge");
+let search = "Gwyneth";
+let found = false;
 
-while (oneToTwenty[arr]) {
-    sum+= oneToTwenty[arr];
-    arr++;
+for (let i = 0; i < names.length; i++) {
+    if (names[i] === search) {
+        found = true;
+        console.log(`Found ${names[i]} at index ${i}.`);
+        break; 
+    }
+}
+
+if (!found) {
+    console.log(`${search} Not Found. He's not belong to the group`);
 }
 
 console.log("");
-console.log("The sum of all numbers: ")
-alert(sum);
-console.log(sum);
+console.log("For/OF Loop");
+//FOR/OF LOOP
+for (let persons of names) {
+    if(persons.toLowerCase() === search.toLowerCase()) {
+        isFound = true;
+         console.log(`Found ${persons}.`);
+         break;
+    }
+}
+if (!found) {
+    console.log(`${search} Not Found. He's not belong to the group`);
+}
 
-alert(`The sum of all numbers in Array is ${sum}.`)
-console.log(`The sum of all numbers in Array is ${sum}.`)
+console.log("");
+console.log("For/In Loop");
+//FOR/IN LOOP
+for(let persoon in names ) {
+    if(names[persoon].toLowerCase() === search.toLowerCase()) {
+        isFound = true;
+          console.log(`Found ${names[persoon]}.`);
+         break;
+    }
+}
+if (!found) {
+    console.log(`${search} Not Found. He's not belong to the group`);
+}

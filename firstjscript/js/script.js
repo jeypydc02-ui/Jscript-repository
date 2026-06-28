@@ -1,110 +1,212 @@
-//FOR-LOOP
-for (let a = 0; a <= 10;a++){
-   
-    if (a > 7) break;
- console.log(a);
-}
+// json
+
+let person = {
+    firstName: "John Paul",
+    middleName: "Silos",
+    lastName: "Dela Cruz",
+    hobbies:["Coding", "Anime", "Kdrama", "Games"],
+    age: "21",
+    Kdrama: {
+        1:{
+            name:"Weak-Hero",
+            type:"Thriller"
+        },
+        2: {
+            name: "Mantis",
+            type: "Thriller"
+        },
+        3: {
+            name:"Sweet-Home",
+            type: "Thrilelr"
+        },
+        4: {
+            name: "Squid-Game",
+            type: "Thriller"
+
+            
+        },
+            pets: {
+                1: {
+                    names: "Elgato",
+                    type: "Dog"
+                },
+                2: {
+                    names: "Ayam",
+                    type: "Dog"
+                },
+                3: {
+                    names: "Ikos",
+                    type: "Cat"
+                }
+
+                
+            }
+    }
+};
+console.log(person);
+console.log(person["firstName"]);
+console.log(person.Kdrama[2]);
+console.log(person.Kdrama);
+console.log(person.age);
+console.log(person.hobbies);
+console.log(person.hobbies[0]);
+console.log(person.hobbies[1]);
+console.log(person.hobbies[2]);
+console.log(person.hobbies[3]);
+console.log(`My name is ${person.firstName} ${person.middleName} ${person.lastName}`);
+console.log("");
+console.log(console.log(person.Kdrama[1]["name"]));
+console.log(console.log(person.Kdrama[1]["type"]));
+console.log(console.log(person.Kdrama[1].type));
+
+console.log("JSON-JSON-JSON");
+console.log(person.Kdrama.pets[1]["names"]);
+console.log(person.Kdrama.pets[3]);
+
+//JSON Write
+
+let persona = {
+    firstNAME:"John Poll",
+    lastNAME:"Dela Cruz",
+    aGe: 22
+};
+console.log(`My name is ${persona.firstNAME} ${persona.middleInital} ${persona.lastNAME}`);
+console.log(persona);
+persona.firstNAME = "Lebron";
+persona.lastNAME = "James";
+persona.middleInital = "S.";
+
+console.log(persona);
+
+console.log(`My name is ${persona.firstNAME} ${persona.middleInital} ${persona.lastNAME}`);
+
+
 
 console.log("");
+//JSON Stringify
 
-
-
-//FOR-LOOP ITERRATING ARRAYS
-
-let people = ["Aljean", "Charles", "Gwyneth", "Jean", "Jenny", "John Paul", "Micaella", "Prince", "Zere May"];
-
-console.log(people[people.length-2]);
-console.log(people[7]);
-
-for(let b = 0; b <people.length;b++){
-
-    if(b > people.length-2) break;
-    console.log(people[b]);
-    
-
+let persons = {
+    firstName:"John",
+    lastName:"Doe",
+    age:40
 }
-console.log("");
+console.log(persons);
+let persoon = JSON.stringify(`${persons.firstName} ${persons.lastName}`);
+console.log(persoon);
+console.log(persons.firstName);
 
-for( let c = people.length-1; c >=0;c--) {
-    console.log(people[c]);
-}
+//JSON Parsing
+let strPerson = `{"firstName":"Jane", "lastName":"Doe","age":30}`;
+
+console.log(strPerson);
+let perrson = JSON.parse(strPerson);
+console.log(perrson);
 
 console.log("");
-//FOR/IN LOOP
-console.log("FOR/IN LOOP");
+//JSON Array
 
-for( let d in people) {
-    console.log(d);
-    console.log(people[d])
-    
-}
+let people = [
+    {
+        firstname:"John Paul",
+        lastname:"Cruz",
+        age:"23"
 
-console.log("");
+    },
 
-for(let e in people) {
-    console.log(`${parseInt(e)+1}. ${people[e]}`);
-}
-console.log("");
+    {
+        firstname:"Thomas Guiller",
+        lastname:"Cruz",
+        age:"23"
+    },
 
-//FOR/OF LOOP
-console.log("FOR/OF LOOP");
+    {
+        firstname:"John Paul",
+        lastname:"Dela Cruz",
+        age:"21"
 
-for(let person of people) {
-    console.log(person);
-}
-console.log("");
-let f =1;
-for (let personn of people) {
-    console.log(`${f}. ${personn}`);
-    f++;
-}
+    },
 
+    {
+        firstname:"Kyle Cedric",
+        lastname:"Espin",
+        age:"22"
 
+    },
+
+    {
+        firstname:"Richmond",
+        lastname:"Garaza",
+        age:"20"
+    },
+
+    {
+        firstname:"Jesus",
+        lastname:"Gamboa",
+        age:"21"
+    }
+
+];
+
+console.log(people);
+console.log(people[0].firstname);
+console.log(people[0].lastname);
+console.log(`${people[2].firstname} ${people[2].lastname}`);
 
 //Tutorial Challenge
+let peoples = [
+    {
+        firstname:"John Paul",
+        lastname:"Cruz",
+        age:"23"
 
-let names = ["Aljean", "Charles", "Gwyneth", "Jean", "Jenny", "John Paul", "Micaella", "Prince", "Zere May"];
-console.log("");
-console.log("Tutorial Challenge");
-let search = "Gwyneth";
-let found = false;
+    },
 
-for (let i = 0; i < names.length; i++) {
-    if (names[i] === search) {
-        found = true;
-        console.log(`Found ${names[i]} at index ${i}.`);
-        break; 
+    {
+        firstname:"Thomas Guiller",
+        lastname:"Cruz",
+        age:"23"
+    },
+
+    {
+        firstname:"John Paul",
+        lastname:"Dela Cruz",
+        age:"21"
+
+    },
+
+    {
+        firstname:"Kyle Cedric",
+        lastname:"Espin",
+        age:"22"
+
+    },
+
+    {
+        firstname:"Richmond",
+        lastname:"Garaza",
+        age:"20"
+    },
+
+    {
+        firstname:"Jesus",
+        lastname:"Gamboa",
+        age:"21"
     }
-}
 
-if (!found) {
-    console.log(`${search} Not Found. He's not belong to the group`);
-}
+];
 
-console.log("");
-console.log("For/OF Loop");
-//FOR/OF LOOP
-for (let persons of names) {
-    if(persons.toLowerCase() === search.toLowerCase()) {
-        isFound = true;
-         console.log(`Found ${persons}.`);
-         break;
+for (let i = 2; i < peoples.length;i++) {
+    
+    if (i > peoples.length-2) break;
+    console.log(peoples[i].lastname);
+    console.log(peoples[i].firstname);
+
+    let strPeople = JSON.stringify(peoples[i]);
+    console.log(peoples[i]);
+
     }
-}
-if (!found) {
-    console.log(`${search} Not Found. He's not belong to the group`);
-}
 
-console.log("");
-console.log("For/In Loop");
-//FOR/IN LOOP
-for(let persoon in names ) {
-    if(names[persoon].toLowerCase() === search.toLowerCase()) {
-        isFound = true;
-          console.log(`Found ${names[persoon]}.`);
-         break;
-    }
-}
-if (!found) {
-    console.log(`${search} Not Found. He's not belong to the group`);
-}
+    console.log("");
+    let strPeople = JSON.stringify(peoples);
+    console.log(peoples);
+

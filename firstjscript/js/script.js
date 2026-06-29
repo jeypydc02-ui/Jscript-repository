@@ -210,3 +210,10 @@ for (let i = 2; i < peoples.length;i++) {
     let strPeople = JSON.stringify(peoples);
     console.log(peoples);
 
+
+    for(let a = 0; a < peoples.length;a++){
+        console.log(`First Name   :  ${peoples[a].firstname}`);
+        console.log(`Last Name    :  ${peoples[a].lastname}`);
+        console.log(`Age          :  ${peoples[a].age}`);
+        console.log("");
+    }

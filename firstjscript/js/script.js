@@ -1,184 +1,87 @@
-//Functions
+//Document Object Model
 
-//Says Hello
-function sayHello() {
+//Using GetElementById
+let result = document.getElementById("results");
+console.log(result);
 
-    for(let i =0; i <10;i++) {
-        if(i > 8) break;
-        console.log("hello");
-        console.log("World");
-        console.log("");
 
-    }
-    
-}
-sayHello();
-console.log("");
+//Using QuerySelector
+let result2 = document.querySelector(".container2 .results");
+console.log(result2);
 
-function equal(num1, num2, num3) {
-    let sum = (num1 + num2) / num3;
-    console.log(sum);
-}
-equal(45, 5, 10);
-console.log("");
+//Using GetElementByClassName
+let result3 = document.getElementsByClassName("results");
+console.log(result3);
 
-console.log("Addition:");
+//Using QuerySelctorAll
+let allClass = document.querySelectorAll(".container2 .results");
+console.log(allClass);
 
-function add(num1, num2) {
-    let sum = num1 + num2;
-    console.log(sum);
-}   
+let innerHTML = document.querySelector(".container #results4").innerHTML = `This is the new innerHTML`;
+console.log(innerHTML);
+
+let innerText = document.querySelector(".container #results4");
+console.log(innerText);
 
 console.log("");
-console.log("Multiplication:");
+//Stored in an Array
+
+let allResults = document.querySelectorAll(".container2 .results");
 
 
-function multiply (num4, num5) {
-    let product = num4 * num5;
-    product /= 3;
-    console.log(product);
-}
 
-multiply
-
-
-let name = ["John", "Jane", "John Paul", "Klarenze"];
-let lastName = ["Doe", "Smith", "Dela Cruz", "Almazar"];
-
-
-function printFullName(name, lastName) {
-    for (let person in name) {
-        console.log(`${name[person]} ${lastName[person]} `);
-}
-}
-printFullName(name, lastName);
-
-console.log("");
-console.log("Using normal for-loop");
-
-
-function printFullName2(name) {
-    for (let a = 0; a < name.length; a++) {
-        console.log(`${name[a]} ${lastName[a]}`);
-    }
-}
-printFullName2(name);
-
-
-//Using return statement
-console.log("");
-console.log("Using return statement");
-
-function addNumber(num1, num2) {
-    return num1 + num2;
-
-
-}
-
-let sum = addNumber(10,10);
-sum*=7;
-console.log(`(10 + 10) * 7 = ${sum}`);
-
-
-//explore
-
-function adds(num1, num2) {
-    return num1 + num2;
-    
-    }
-
-function multiply( num3, num4) {
-    return num3 * num4;
-}
-
-console.log(` ${adds(3, 10)} + ${multiply(3, 10)} = ${adds(3, 10) + multiply(3, 10)}`);
-
-
-console.log("");
-function adds(num1, num2) {
-    return num1 + num2;
-    
-    }
-
-function multiply( num3, num4) {
-    return num3 * num4;
-}
-
-
-//Using string names
-let lastNamee = "Doe";
-
-function appendLastName(firstName) {
-    return `${firstName} ${lastNamee}`;
-
-}
-
-let fullName = appendLastName("John");
-console.log(fullName);
-
-
-// Variable Scoping
-let x = 10;
-
-function sayX(x) {
-    console.log(x);
-
-}
-
-function addX(x) {
-    console.log(x + 10);
-
-}
-
-sayX(x);
-addX(x);
+console.log(allResults[0]);
+console.log(allResults[1]);
+console.log(allResults[2]);
 
 console.log("");
 
-function sayY() {
-    let y = 10;
-    console.log(y);
-}
+//Accessing Array for Specific Element
+let firstResults = allResults[0].innerHTML = `This is the new innerHTML for first element`;
+let secondResults = allResults[1].innerHTML = `This is the new innerHTML for second element`;
+let thirdResults = allResults[2].innerHTML = `This is the new innerHTML for third element`;
 
-let global = sayY();
-function addY(num) {
-    console.log(global + num);
-
-    sayY();
-    addY(10);
-}
+console.log(allResults[0]);
+console.log(firstResults);
+console.log(secondResults);
+console.log(thirdResults);
 
 
-let summation = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function summationArray(summation) {
-    for (let i = 0; i < summation.length; i++) {
-        console.log(summation[i]);
-    }
 
-    return summation[0] + summation[1] + summation[2] + summation[3] + summation[4] + summation[5] + summation[6] + summation[7] + summation[8] + summation[9];
-    
-}
 
-let sums =summationArray(summation);
 
-console.log(`The sum of the array is ${sums}`);
 
-console.log("");
 
-let summations = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let summ = 0;
 
-function summationArrays(summations) {
-    for (let i = 0; i < summations.length; i++) {
-        console.log(summations[i]);
-        summ += summations[i];
-    }
-      
-        return summ;
-    
-}
+//MANIPULATE ATTRIBUTES
 
-summationArrays(summations);
+let textInput = document.querySelector("#input");
+textInput.placeholder = `Enter your first name`;
 
-console.log(`The sum of the array is ${summ}`);
+let textButton = document.querySelector("#btn");
+textButton.textContent = `Pindotin ako`;
+
+
+
+
+//Image
+
+let imagee = document.querySelector("#image");
+imagee.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28LgmC2T4_ftwGSxmAZAshdkcJ41C8NMqqBgjkO7JU-eJnRMfbPvKx5k&s=10"
+
+let changeLink = document.querySelector("#link");
+
+changeLink.href = "https://www.instagram.com/jppdlcrz/"
+changeLink.target = "_blank";
+
+let changeBody = document.querySelector("body");
+changeBody.style.backgroundColor = "lightgray";
+
+let changeH1 = document.querySelector("#results");
+changeH1.style.textAlign = "center";
+changeH1.style.fontFamily = "Arial, Helvetica, sans-serif";
+changeH1.style.color = "maroon";
+changeH1.style.borderBottom = "2px solid maroon";
+
+
